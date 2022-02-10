@@ -1,15 +1,12 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Our Extension",
   "version": "1.0",
-  "action": {
-    "popup": "./popup.html"
+  "browser_action": {
+    "default_popup": "popup.html"
   },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "description": "A plain text description",
-  "icons": {},
-  "background": {
-    "service_worker": "background.js"
-  },
   "content_scripts": [
     {
       "matches": [
@@ -27,20 +24,7 @@
     }
   ],
   "web_accessible_resources": [
-    {
-      "resources": [
-        "*.jpg",
-        "*.png"
-      ],
-      "matches": [
-        "*://www.facebook.com/*",
-        "*://www.instagram.com/*",
-        "*://www.youtube.com/*",
-        "*://www.9gag.com/*",
-        "*://*.reddit.com/*",
-        "*://www.tiktok.com/*",
-        "*://www.twitter.com/*"
-      ]
-    }
+    "*.jpg",
+    "*.png"
   ]
 }
