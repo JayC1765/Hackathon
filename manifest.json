@@ -8,10 +8,8 @@
   "default_locale": "en",
   "description": "A plain text description",
   "icons": {},
-  "author": 5,
   "background": {
     "service_worker": "background.js",
-    "type": 5
   },
   "content_scripts": [
     {
