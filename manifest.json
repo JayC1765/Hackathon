@@ -5,11 +5,10 @@
   "action": {
     "popup": "./popup.html"
   },
-  "default_locale": "en",
   "description": "A plain text description",
   "icons": {},
   "background": {
-    "service_worker": "background.js",
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
@@ -29,7 +28,10 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": "./Images/*",
+      "resources": [
+        "*.jpg",
+        "*.png"
+      ],
       "matches": [
         "*://www.facebook.com/*",
         "*://www.instagram.com/*",
