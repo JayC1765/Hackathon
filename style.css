@@ -1,0 +1,13 @@
+#terminal {
+    background-color: black;
+    font-size: large;
+    height: 450px;
+    width: 800px;
+}
+
+#console {
+    background-color: black;
+    font-size: medium;
+    height: 50px;
+    width: 200px;
+}
