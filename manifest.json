@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Our Extension",
+  "version": "1.0",
+  "action": {
+    "popup": "./popup.html"
+  },
+  "default_locale": "en",
+  "description": "A plain text description",
+  "icons": {},
+  "author": 5,
+  "background": {
+    "service_worker": "background.js",
+    "type": 5
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.facebook.com/*",
+        "*://www.instagram.com/*",
+        "*://www.youtube.com/*",
+        "*://www.9gag.com/*",
+        "*://*.reddit.com/*",
+        "*://www.tiktok.com/*",
+        "*://www.twitter.com/*"
+      ],
+      "js": [
+        "./sentance.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": "./Images/*",
+      "matches": [
+        "*://www.facebook.com/*",
+        "*://www.instagram.com/*",
+        "*://www.youtube.com/*",
+        "*://www.9gag.com/*",
+        "*://*.reddit.com/*",
+        "*://www.tiktok.com/*",
+        "*://www.twitter.com/*"
+      ]
+    }
+  ]
+}
