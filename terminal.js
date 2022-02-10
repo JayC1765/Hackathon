@@ -4,6 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     const code = document.querySelector('#terminal').value;
     document.querySelector('#terminal').value = '';
-    document.querySelector('#console').value = Function(`"use strict"; return (` + code + `)`)();
+    document.querySelector('#console').value = eval(code);
   });
 });
